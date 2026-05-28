@@ -1,0 +1,387 @@
+/* ==========================================================================
+   1. REGLAS GENERALES Y RESETEO
+   ========================================================================== */
+
+/* Reseteo básico para asegurar un comportamiento uniforme de márgenes y paddings en todos los navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configuración de transiciones globales para scroll suave al usar enlaces internos */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Aplicación de las tipografías base solicitadas para el cuerpo general de la web */
+body {
+    font-family: 'Cuerpo - Display Semibold Italic', 'Arial Rounded MT Bold', sans-serif;
+    color: #606060;
+    line-height: 1.6;
+    background-color: #f2e7f0;
+}
+
+/* Contenedor fijo centrado para estandarizar el ancho máximo de la interfaz */
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Estilización general para títulos de sección recurrentes */
+.titulo-seccion {
+    font-family: 'Arial Rounded MT Bold', sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #606060;
+}
+
+
+/* ==========================================================================
+   2. HEADER & NAVEGACIÓN
+   ========================================================================== */
+
+/* Fondo oscuro (#606060) que abarca todo el ancho del encabezado */
+.sitio-header {
+    background-color: #606060;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Flexbox para separar el logo a la izquierda y el menú a la derecha */
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Contenedor del logo con un tamaño simétrico de 50x50px */
+.logo-placeholder {
+    width: 50px;
+    height: 50px;
+    background-color: #edb0e2;
+    color: #606060;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial Rounded MT Bold', sans-serif;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+/* Alineación en fila para los links del menú de navegación */
+.navegacion-principal {
+    display: flex;
+    gap: 25px;
+}
+
+/* Estilos de los enlaces individuales con un tono claro para garantizar el contraste */
+.navegacion-principal a {
+    color: #f2e7f0;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+/* Efecto Hover que cambia al color secundario medio */
+.navegacion-principal a:hover {
+    color: #c0aac1;
+}
+
+
+/* ==========================================================================
+   3. SECCIÓN HERO (Fondo Claro 2: #c9ddff)
+   ========================================================================== */
+
+.seccion-hero {
+    background-color: #c9ddff;
+    padding: 100px 0;
+}
+
+/* Estructura de dos columnas usando Flexbox con distribución equitativa */
+.hero-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+/* Contenedor del bloque de texto izquierdo */
+.hero-contenido {
+    flex: 1;
+}
+
+/* Título principal con tipografía destacada */
+.hero-contenido h1 {
+    font-family: 'Arial Rounded MT Bold', sans-serif;
+    font-size: 3rem;
+    color: #606060;
+    margin-bottom: 10px;
+}
+
+/* Subtítulo enfocado en la especialidad técnica */
+.hero-contenido h2 {
+    font-size: 1.5rem;
+    color: #c0aac1;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+.hero-contenido p {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+/* Botón principal estilizado con el color de acento (#edb0e2) */
+.boton-accion {
+    display: inline-block;
+    background-color: #edb0e2;
+    color: #606060;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Efecto hover interactivo: se oscurece levemente y genera una micro-pulsación */
+.boton-accion:hover {
+    background-color: #c0aac1;
+    transform: translateY(-3px);
+}
+
+/* Contenedor derecho para la imagen de perfil */
+.hero-imagen {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* Transformación de la imagen cuadrada a una circunferencia perfecta */
+.hero-imagen img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #f2e7f0;
+}
+
+
+/* ==========================================================================
+   4. SECCIÓN MIS PROYECTOS (Fondo Claro 1: #f2e7f0)
+   ========================================================================== */
+
+.seccion-proyectos {
+    background-color: #f2e7f0;
+    padding: 100px 0;
+}
+
+/* Distribución horizontal de tres elementos usando Flexbox */
+.proyectos-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* Tarjeta contenedora con bordes suavizados y sombreado sutil */
+.tarjeta-proyecto {
+    background-color: #c9ddff;
+    border-radius: 12px;
+    overflow: hidden;
+    flex: 1;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+/* Efecto de elevación al posicionar el cursor sobre la tarjeta */
+.tarjeta-proyecto:hover {
+    transform: translateY(-5px);
+}
+
+/* Control estricto de proporciones en las imágenes internas de los proyectos */
+.tarjeta-proyecto img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+/* Caja de separación para el texto interno de la tarjeta */
+.tarjeta-contenido {
+    padding: 25px;
+}
+
+.tarjeta-contenido h3 {
+    font-family: 'Arial Rounded MT Bold', sans-serif;
+    color: #606060;
+    margin-bottom: 10px;
+}
+
+
+/* ==========================================================================
+   5. SECCIÓN HABILIDADES (Fondo Claro 2: #c9ddff)
+   ========================================================================== */
+
+.seccion-habilidades {
+    background-color: #c9ddff;
+    padding: 100px 0;
+}
+
+/* Distribución en fila horizontal de cuatro bloques de aptitud */
+.habilidades-flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Bloques de habilidades que contrastan dinámicamente usando el Fondo Claro 1 */
+.tarjeta-habilidad {
+    flex: 1;
+    background-color: #f2e7f0;
+    text-align: center;
+    padding: 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    color: #606060;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Cambio de color inverso al pasar el mouse por encima */
+.tarjeta-habilidad:hover {
+    background-color: #edb0e2;
+    color: #606060;
+}
+
+
+/* ==========================================================================
+   6. SECCIÓN CONTACTO (Fondo Claro 1: #f2e7f0)
+   ========================================================================== */
+
+.seccion-contacto {
+    background-color: #f2e7f0;
+    padding: 100px 0;
+}
+
+/* División de la pantalla en dos columnas mediante Flexbox */
+.contacto-flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+/* Columna de llamada a la acción */
+.contacto-texto {
+    flex: 1;
+}
+
+.contacto-texto h2 {
+    font-family: 'Arial Rounded MT Bold', sans-serif;
+    font-size: 2.5rem;
+    color: #606060;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+/* Columna que aloja la estructura del formulario */
+.contacto-formulario {
+    flex: 1;
+    background-color: #c9ddff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Contenedor interno para dar holgura vertical a cada input */
+.grupo-formulario {
+    margin-bottom: 20px;
+}
+
+.grupo-formulario label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #606060;
+}
+
+/* Estandarización de estilos visuales para cajas de texto y campos interactivos */
+.grupo-formulario input,
+.grupo-formulario textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #c0aac1;
+    background-color: #f2e7f0;
+    border-radius: 6px;
+    font-family: inherit;
+    color: #606060;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+/* Variación cromática perimetral al activar un campo */
+.grupo-formulario input:focus,
+.grupo-formulario textarea:focus {
+    border-color: #edb0e2;
+}
+
+/* Botón de envío del formulario alineado con la estética global */
+.boton-formulario {
+    width: 100%;
+    background-color: #edb0e2;
+    color: #606060;
+    padding: 14px;
+    border: none;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.boton-formulario:hover {
+    background-color: #c0aac1;
+}
+
+
+/* ==========================================================================
+   7. FOOTER (Fondo Principal Oscuro: #606060)
+   ========================================================================== */
+
+.sitio-footer {
+    background-color: #606060;
+    color: #f2e7f0;
+    padding: 40px 0;
+}
+
+/* Alineación y distribución del contenido del pie de página */
+.footer-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright {
+    font-size: 0.9rem;
+}
+
+/* Contenedor horizontal para enlaces a plataformas externas */
+.redes-sociales {
+    display: flex;
+    gap: 20px;
+}
+
+.redes-sociales a {
+    color: #f2e7f0;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+/* Destacado sutil al interactuar con las redes sociales */
+.redes-sociales a:hover {
+    color: #edb0e2;
+}
