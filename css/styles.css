@@ -329,7 +329,7 @@ body {
 
 /* Botón de envío del formulario alineado con la estética global */
 .boton-formulario {
-    width: 20%;
+    width: 1000%;
     background-color: #edb0e2;
     color: #606060;
     padding: 14px;
