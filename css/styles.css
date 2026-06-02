@@ -163,8 +163,8 @@ body {
 
 /* Transformación de la imagen cuadrada a una circunferencia perfecta */
 .hero-imagen img {
-    width: 200px;
-    height: 200px;
+    width: 350px;
+    height: 350px;
     border-radius: 50%;
     object-fit: cover;
     border: 5px solid #f2e7f0;
