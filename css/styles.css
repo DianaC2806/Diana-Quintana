@@ -61,9 +61,9 @@ body {
 
 /* Contenedor del logo con un tamaño simétrico de 50x50px */
 .logo-placeholder {
-    width: 120px;
-    height: 60px;
-    background-color: #f1ceeb;
+    width: 75px;
+    height: 35px;
+    background-color: #cac5c9;
     color: #606060;
     display: flex;
     justify-content: center;
