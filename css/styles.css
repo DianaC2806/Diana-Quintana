@@ -61,18 +61,16 @@ body {
 
 /* Contenedor del logo con un tamaño simétrico de 50x50px */
 .logo-placeholder {
+    width: 75px;
+    height: 35px;
+    background-color: #cac5c9;
+    color: #606060;
     display: flex;
+    justify-content: center;
     align-items: center;
-}
-
-.logo-placeholder img {
-    height: 55px;
-    width: auto;
-    transition: transform 0.3s ease;
-}
-
-.logo-placeholder img:hover {
-    transform: scale(1.05);
+    font-family: 'Arial Rounded MT Bold', sans-serif;
+    font-weight: bold;
+    border-radius: 8px;
 }
 
 /* Alineación en fila para los links del menú de navegación */
@@ -208,9 +206,7 @@ body {
 .tarjeta-proyecto img {
     width: 100%;
     height: 220px;
-    object-fit: contain;
-    background-color: #ffffff;
-    padding: 10px;
+    object-fit: cover;
 }
 
 /* Caja de separación para el texto interno de la tarjeta */
