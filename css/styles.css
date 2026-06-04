@@ -248,7 +248,7 @@ body {
     border-radius: 8px;
     font-weight: bold;
     color: #606060;
-   
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
     border-bottom: 4px solid #edb0e2;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
