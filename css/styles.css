@@ -61,16 +61,18 @@ body {
 
 /* Contenedor del logo con un tamaño simétrico de 50x50px */
 .logo-placeholder {
-    width: 75px;
-    height: 35px;
-    background-color: #cac5c9;
-    color: #606060;
     display: flex;
-    justify-content: center;
     align-items: center;
-    font-family: 'Arial Rounded MT Bold', sans-serif;
-    font-weight: bold;
-    border-radius: 8px;
+}
+
+.logo-placeholder img {
+    height: 55px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo-placeholder img:hover {
+    transform: scale(1.05);
 }
 
 /* Alineación en fila para los links del menú de navegación */
